@@ -1,0 +1,70 @@
+.clock {
+  position: relative;
+  border: solid #FF9F1C 6px;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+document, body {
+  margin: 0 auto;
+  margin-top: -25px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px 200px;
+  grid-gap: 20px;
+  justify-content: space-around;
+  align-content: space-around;
+  padding: 25px;
+  background-color: #011627;
+}
+
+.grid-item {
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Racing Sans One', cursive;
+  font-size: 2.25em;
+  color: white;
+  line-height: 150px;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  color: white;
+  padding: 1em 0;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  height: 45%;
+  width: 5px;
+  background-color: black;
+  transform: rotate(0deg);
+  transform-origin: bottom;
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.heading {
+  height: 150px;
+  width: 100%;
+  background-color: #e71d36;
+  text-shadow: 2px 2px 2px black;
+}
+
+.hour {
+  height: 35%;
+  background-color: #e71d36;
+  z-index: 10;
+}

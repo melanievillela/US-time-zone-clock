@@ -10,9 +10,11 @@
 document, body {
   margin: 0 auto;
   margin-top: -25px;
+  overflow: hidden;
 }
 
 .grid-container {
+  height: 80%;
   display: grid;
   grid-template-columns: 200px 200px 200px 200px;
   grid-template-rows: 200px 200px 200px 200px;
@@ -57,7 +59,7 @@ h2 {
 }
 
 .heading {
-  height: 150px;
+  height: 20%;
   width: 100%;
   background-color: #e71d36;
   text-shadow: 2px 2px 2px black;

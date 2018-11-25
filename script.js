@@ -5,10 +5,7 @@ function setTime() {
   const secHand = document.querySelectorAll(".sec");
   const minHand = document.querySelectorAll(".min");
   const hourHand = document.querySelectorAll(".hour");
-// Set Timezone to Central
-  if (timezone != 300) {
-    timezone = 300;
-  }
+
 //Set Seconds
   for (let i = 0; i < secHand.length; i++) {
     const second = now.getSeconds();

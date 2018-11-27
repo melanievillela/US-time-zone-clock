@@ -1,14 +1,15 @@
 // Set Time
 function setTime() {
-  const now = new Date();
-  const timezone = now.getTimezoneOffset();
+  //Set moment.js default timzone to US Central
+  let now = moment.tz(moment(), 'US/Central');
   const secHand = document.querySelectorAll(".sec");
   const minHand = document.querySelectorAll(".min");
   const hourHand = document.querySelectorAll(".hour");
 
 //Set Seconds
   for (let i = 0; i < secHand.length; i++) {
-    const second = now.getSeconds();
+    //const second = now.getSeconds();
+    const second = now.second();
     const secDegrees = (second * 6);
     secHand[i].style.transform = `rotate(${secDegrees}deg)`;
     if (second === 0) {
@@ -17,7 +18,8 @@ function setTime() {
   }
 //Set Minutes
   for (let i = 0; i < minHand.length; i++) {
-    const minute = now.getMinutes();
+    //const minute = now.getMinutes();
+    const minute = now.minute();
     const minDegrees = (minute * 6);
     minHand[i].style.transform = `rotate(${minDegrees}deg)`;
     if (minute === 0) {
@@ -26,7 +28,8 @@ function setTime() {
   }
 //Set Hours
   for (let i = 0; i < hourHand.length; i++) {
-    const hour = now.getHours();
+    //const hour = now.getHours();
+    const hour = now.hour();
     if (hourHand[i].parentNode.classList.contains("zone-Central")) {
       const hourDegrees = (hour * 30);
       hourHand[i].style.transform = `rotate(${hourDegrees}deg)`;
@@ -45,3 +48,4 @@ function setTime() {
 
 setInterval(setTime, 1000);
 setTime()
+
